@@ -29,7 +29,7 @@ As informações profissionais são mantidas em `src/data/portfolio.ts` e inclue
 - Usar branco, preto e verde-petróleo como cor de destaque.
 - Tokens principais: `#0d625d` no tema claro e `#7fc8bf` no tema escuro.
 - Manter a interface minimalista, responsiva, com foco visível e contraste adequado.
-- Partículas são decorativas: não podem dificultar leitura ou interação.
+- Partículas são decorativas: não podem dificultar leitura ou interação. Sob blocos de texto, devem receber desfoque adicional por uma superfície translúcida.
 
 ## Critérios de aceite para mudanças
 

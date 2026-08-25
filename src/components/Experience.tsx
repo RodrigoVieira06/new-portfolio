@@ -16,7 +16,7 @@ export function Experience() {
               <span>{experience.period}</span>
               <b>0{index + 1}</b>
             </div>
-            <div className="experience-card__body">
+            <div className="experience-card__body text-backdrop">
               <h3>{experience.company}</h3>
               <p className="experience-card__role">{experience.role}</p>
               <p>{experience.summary}</p>

@@ -3,7 +3,7 @@ import { Button } from './ui/button'
 export function Hero() {
   return (
     <section className="hero" id="inicio">
-      <div className="hero__copy">
+      <div className="hero__copy text-backdrop">
         <p className="eyebrow">Disponível para oportunidades CLT</p>
         <h1>
           Desenvolvimento frontend

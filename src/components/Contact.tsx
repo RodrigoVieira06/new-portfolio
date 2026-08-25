@@ -15,7 +15,7 @@ export function Contact() {
     <section className="section contact" id="contato">
       <SectionHeading eyebrow="04 / CONTATO" title="Contato" />
       <div className="contact__layout">
-        <div>
+        <div className="text-backdrop">
           <p className="lead">
             Estou disponível para conversar sobre oportunidades CLT em
             desenvolvimento frontend.

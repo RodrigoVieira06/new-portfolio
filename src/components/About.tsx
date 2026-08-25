@@ -5,7 +5,7 @@ export function About() {
     <section className="section about" id="sobre">
       <SectionHeading eyebrow="01 / SOBRE MIM" title="Perfil profissional" />
       <div className="about__content">
-        <div>
+        <div className="text-backdrop">
           <p className="lead">
             Desenvolvedor Frontend com trajetória iniciada em 2019 e experiência
             em produtos web, interfaces e colaboração técnica.

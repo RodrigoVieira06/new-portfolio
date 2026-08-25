@@ -39,6 +39,7 @@ App
 - Há temas claro e escuro. A preferência inicial segue o sistema, pode ser alterada no header e é salva em `localStorage` como `theme`.
 - O tema usa branco, preto e verde-petróleo: no claro `#0d625d`; no escuro `#7fc8bf`. Não retorne ao verde-limão.
 - O fundo contém apenas partículas desfocadas decorativas. Ele deve permanecer com `aria-hidden`, não capturar ponteiro e respeitar `prefers-reduced-motion`.
+- Todo bloco textual exposto sobre o fundo deve usar a classe `text-backdrop`, que aplica desfoque adicional às partículas sem alterar seu conteúdo.
 - Mantenha semântica HTML, foco visível, contraste suficiente e comportamento responsivo a partir de 760px.
 
 ## Formulário

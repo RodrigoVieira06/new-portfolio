@@ -34,7 +34,7 @@ export function App() {
         <Portfolio />
         <Contact />
       </main>
-      <footer>
+      <footer className="text-backdrop">
         <span>© {new Date().getFullYear()} Rodrigo Vieira Lima</span>
         <span>Feito com intenção e React.</span>
       </footer>
