@@ -3,15 +3,12 @@ import { SectionHeading } from './SectionHeading'
 export function About() {
   return (
     <section className="section about" id="sobre">
-      <SectionHeading
-        eyebrow="01 / SOBRE MIM"
-        title="Tecnologia com intenção."
-      />
+      <SectionHeading eyebrow="01 / SOBRE MIM" title="Perfil profissional" />
       <div className="about__content">
         <div>
           <p className="lead">
-            Minha trajetória em tecnologia começou em 2019 e é guiada por
-            curiosidade, colaboração e atenção aos detalhes.
+            Desenvolvedor Frontend com trajetória iniciada em 2019 e experiência
+            em produtos web, interfaces e colaboração técnica.
           </p>
           <p>
             Atuo com React, TypeScript e JavaScript na construção de aplicações
@@ -20,9 +17,8 @@ export function About() {
             negócio e uma experiência de uso que faça sentido.
           </p>
           <p>
-            Além de desenvolver, gosto de criar fundações que ajudam o time:
-            padrões claros, componentes reaproveitáveis e conversas técnicas que
-            fazem a solução avançar.
+            Também contribuo com padrões de interface, componentes
+            reutilizáveis, documentação e troca técnica com o time.
           </p>
         </div>
         <div className="skills-grid">

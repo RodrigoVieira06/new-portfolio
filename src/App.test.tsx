@@ -6,16 +6,26 @@ describe('App', () => {
   it('apresenta as áreas principais do portfólio', () => {
     render(<App />)
     expect(
-      screen.getByRole('heading', { name: /interfaces que movem negócios/i }),
+      screen.getByRole('heading', {
+        name: /desenvolvimento frontend para produtos digitais/i,
+      }),
     ).toBeInTheDocument()
     expect(
-      screen.getByRole('heading', { name: /tecnologia com intenção/i }),
+      screen.getByRole('heading', { name: /perfil profissional/i }),
     ).toBeInTheDocument()
     expect(
-      screen.getByRole('heading', { name: /uma trajetória em evolução/i }),
+      screen.getByRole('heading', { name: /experiência profissional/i }),
     ).toBeInTheDocument()
     expect(
-      screen.getByRole('heading', { name: /vamos criar algo relevante/i }),
+      screen.getByRole('heading', { name: /contato/i }),
+    ).toBeInTheDocument()
+  })
+
+  it('apresenta disponibilidade para oportunidades CLT', () => {
+    render(<App />)
+
+    expect(
+      screen.getByText(/disponível para oportunidades clt/i),
     ).toBeInTheDocument()
   })
 

@@ -2,13 +2,14 @@
 
 ## Propósito
 
-Este repositório contém o portfólio público de Rodrigo Vieira Lima. A prioridade é comunicar senioridade frontend de modo objetivo, acessível, responsivo e fácil de manter.
+Este repositório contém o portfólio público de Rodrigo Vieira Lima, direcionado a oportunidades CLT em desenvolvimento frontend. A prioridade é comunicar experiência profissional confirmada de modo objetivo, acessível, responsivo e fácil de manter.
 
 ## Mapa do sistema
 
 ```text
 App
-├── Header              navegação por âncoras
+├── ParticleBackground  partículas decorativas desfocadas e contínuas
+├── Header              navegação por âncoras, fixa, e alternância de tema
 ├── Hero                proposta de valor e CTAs
 ├── About               narrativa e habilidades
 ├── Experience          dados de carreira em timeline
@@ -23,6 +24,9 @@ App
 - As seções compõem a página e não devem acessar APIs diretamente.
 - `src/components/ui` concentra primitivos no padrão shadcn: composição, variantes CVA e `cn`.
 - SCSS é global por escolha deliberada para uma landing compacta. Novos estilos devem usar o prefixo da seção/componente.
+- O tema é controlado por `data-theme` no elemento `html`. A preferência segue o sistema no primeiro acesso e fica persistida como `theme`.
+- A paleta de destaque é verde-petróleo, combinada com superfícies brancas e pretas. Os tokens ficam em `src/styles/globals.scss`.
+- `ParticleBackground` é decorativo, usa `aria-hidden`, não responde ao cursor e respeita `prefers-reduced-motion`.
 - O formulário usa `mailto:`. Não inventar endpoint. Se houver backend, trocar a implementação de `onSubmit` no hook e manter o schema e os testes.
 
 ## Regras de evolução
@@ -32,6 +36,13 @@ App
 3. Manter HTML semântico, foco visível e contrastes adequados.
 4. Nunca adicionar informação profissional não confirmada pelo currículo ou por Rodrigo.
 5. Antes de entregar: `make check`.
+
+## Qualidade
+
+- Jest e Testing Library cobrem o conteúdo estrutural, disponibilidade CLT, alternância de tema e validação do formulário.
+- Biome faz lint, formatação e organização de imports.
+- Lefthook executa lint e testes no pre-commit. `make check` reúne lint, testes e build.
+- Consulte `AGENTS.md` e `docs/REQUIREMENTS.md` para as regras completas de evolução.
 
 ## Limites
 

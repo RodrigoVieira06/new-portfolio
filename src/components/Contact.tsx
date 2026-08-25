@@ -13,15 +13,12 @@ export function Contact() {
   } = useContactForm()
   return (
     <section className="section contact" id="contato">
-      <SectionHeading
-        eyebrow="04 / CONTATO"
-        title="Vamos criar algo relevante?"
-      />
+      <SectionHeading eyebrow="04 / CONTATO" title="Contato" />
       <div className="contact__layout">
         <div>
           <p className="lead">
-            Tem uma ideia, oportunidade ou produto que precisa de uma boa
-            experiência frontend? Vamos conversar.
+            Estou disponível para conversar sobre oportunidades CLT em
+            desenvolvimento frontend.
           </p>
           <a className="contact__email" href="mailto:rodrigovlima06@gmail.com">
             <Mail size={19} /> rodrigovlima06@gmail.com

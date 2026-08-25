@@ -4,21 +4,20 @@ export function Hero() {
   return (
     <section className="hero" id="inicio">
       <div className="hero__copy">
-        <p className="eyebrow">Disponível para novos desafios</p>
+        <p className="eyebrow">Disponível para oportunidades CLT</p>
         <h1>
-          Interfaces que
+          Desenvolvimento frontend
           <br />
-          <em>movem negócios.</em>
+          <em>para produtos digitais.</em>
         </h1>
         <p className="hero__intro">
-          Sou Rodrigo Vieira, Desenvolvedor Frontend Sênior. Transformo
-          problemas complexos em produtos digitais claros, escaláveis e
-          agradáveis de usar.
+          Sou Rodrigo Vieira, Desenvolvedor Frontend Sênior com experiência em
+          React, TypeScript, design systems, microfrontends e aplicações web.
         </p>
         <div className="hero__actions">
           <Button asChild>
             <a href="#experiencia">
-              Conheça minha trajetória <ArrowDownRight size={18} />
+              Ver experiência profissional <ArrowDownRight size={18} />
             </a>
           </Button>
           <Button asChild variant="ghost">

@@ -4,4 +4,8 @@ dist/
 coverage/
 .env
 *.tsbuildinfo
-.codex/
+.codex/*
+!.codex/skills/
+.codex/skills/*
+!.codex/skills/portfolio-frontend/
+!.codex/skills/portfolio-frontend/SKILL.md

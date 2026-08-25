@@ -5,8 +5,8 @@ export function Experience() {
     <section className="section experience" id="experiencia">
       <SectionHeading
         eyebrow="02 / EXPERIÊNCIA"
-        title="Uma trajetória em evolução."
-        description="Produtos, fundamentos técnicos e colaboração em cada etapa."
+        title="Experiência profissional"
+        description="Histórico de atuação, responsabilidades e tecnologias utilizadas."
       />
       <div className="timeline">
         {experiences.map((experience, index) => (

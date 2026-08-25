@@ -41,7 +41,7 @@ export function Header({ theme, onThemeToggle }: HeaderProps) {
             {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
           </button>
           <Button asChild variant="outline">
-            <a href="#contato">Vamos conversar</a>
+            <a href="#contato">Entrar em contato</a>
           </Button>
           <button type="button" className="menu-button" aria-label="Abrir menu">
             <Menu size={20} />
