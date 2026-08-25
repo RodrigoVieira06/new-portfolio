@@ -14,7 +14,8 @@ Este é o portfólio público de Rodrigo Vieira Lima, voltado a processos seleti
 
 - Use português brasileiro, tom direto, profissional e verificável.
 - Priorize clareza para recrutadores: cargo, contexto, responsabilidades, tecnologias e contato.
-- A proposta de trabalho é CLT. Não use linguagem de freelancing, venda de serviços ou promessas comerciais.
+- O público principal são processos CLT. Não use linguagem de freelancing, venda de serviços ou promessas comerciais.
+- Não afirme disponibilidade para oportunidades sem confirmação explícita do Rodrigo.
 - Evite slogans, frases de impacto, superlativos e clichês como “transformar negócios”, “fazer acontecer” ou “criar algo relevante”.
 
 ## Arquitetura
@@ -40,6 +41,7 @@ App
 - O tema usa branco, preto e verde-petróleo: no claro `#0d625d`; no escuro `#7fc8bf`. Não retorne ao verde-limão.
 - O fundo contém apenas partículas desfocadas decorativas. Ele deve permanecer com `aria-hidden`, não capturar ponteiro e respeitar `prefers-reduced-motion`.
 - Todo bloco textual exposto sobre o fundo deve usar a classe `text-backdrop`, que aplica desfoque adicional às partículas sem alterar seu conteúdo.
+- A grade de habilidades usa logotipos decorativos do Simple Icons; mantenha o nome da tecnologia em texto e use apenas tecnologias confirmadas em `src/data/portfolio.ts`.
 - Mantenha semântica HTML, foco visível, contraste suficiente e comportamento responsivo a partir de 760px.
 
 ## Formulário

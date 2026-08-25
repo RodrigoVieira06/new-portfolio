@@ -4,15 +4,15 @@ export function Hero() {
   return (
     <section className="hero" id="inicio">
       <div className="hero__copy text-backdrop">
-        <p className="eyebrow">Disponível para oportunidades CLT</p>
         <h1>
-          Desenvolvimento frontend
+          Rodrigo
           <br />
-          <em>para produtos digitais.</em>
+          <em>Vieira Lima.</em>
         </h1>
+        <p className="hero__role">Desenvolvedor Frontend</p>
         <p className="hero__intro">
-          Sou Rodrigo Vieira, Desenvolvedor Frontend Sênior com experiência em
-          React, TypeScript, design systems, microfrontends e aplicações web.
+          Experiência em React, TypeScript, design systems, microfrontends e
+          aplicações web.
         </p>
         <div className="hero__actions">
           <Button asChild>

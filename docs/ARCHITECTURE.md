@@ -28,6 +28,7 @@ App
 - A paleta de destaque é verde-petróleo, combinada com superfícies brancas e pretas. Os tokens ficam em `src/styles/globals.scss`.
 - `ParticleBackground` é decorativo, usa `aria-hidden`, não responde ao cursor e respeita `prefers-reduced-motion`.
 - A classe global `text-backdrop` é aplicada aos blocos textuais para desfocar as partículas abaixo deles e preservar a leitura.
+- A grade de habilidades recebe `iconUrl` dos dados profissionais e renderiza logotipos decorativos, com o nome da tecnologia preservado no conteúdo.
 - O formulário usa `mailto:`. Não inventar endpoint. Se houver backend, trocar a implementação de `onSubmit` no hook e manter o schema e os testes.
 
 ## Regras de evolução

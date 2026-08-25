@@ -35,7 +35,7 @@ O site apresenta Rodrigo para vagas CLT de desenvolvimento frontend. Recrutadore
 - Não invente empresas, cargos, datas, resultados, métricas, projetos, certificações ou tecnologias.
 - Escreva em português brasileiro, de forma direta e verificável.
 - Evite slogans, clichês, superlativos, promessas e tom de venda/freelancing.
-- Mantenha referência explícita a oportunidades CLT quando houver texto de disponibilidade ou contato.
+- O público principal são oportunidades CLT, mas não declare disponibilidade para oportunidades sem confirmação explícita.
 
 ## Regras técnicas
 
@@ -47,6 +47,7 @@ O site apresenta Rodrigo para vagas CLT de desenvolvimento frontend. Recrutadore
 - Temas usam `data-theme` no `html`, preferência do sistema no primeiro acesso e persistência em `localStorage` como `theme`.
 - A paleta usa branco, preto e verde-petróleo: `#0d625d` no claro e `#7fc8bf` no escuro. Não restabeleça verde-limão.
 - O fundo é exclusivamente `ParticleBackground`: decorativo, sem eventos de ponteiro, com `aria-hidden` e compatível com `prefers-reduced-motion`.
+- Tecnologias confirmadas podem usar logotipos decorativos do Simple Icons, mas o nome da tecnologia deve continuar visível em texto.
 - O formulário é `mailto:` validado; não adicione backend, analytics ou persistência sem solicitação explícita.
 
 ## Qualidade obrigatória

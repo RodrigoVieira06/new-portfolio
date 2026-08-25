@@ -17,8 +17,8 @@ export function Contact() {
       <div className="contact__layout">
         <div className="text-backdrop">
           <p className="lead">
-            Estou disponível para conversar sobre oportunidades CLT em
-            desenvolvimento frontend.
+            Para entrar em contato sobre meu trabalho, use o formulário ou o
+            e-mail abaixo.
           </p>
           <a className="contact__email" href="mailto:rodrigovlima06@gmail.com">
             <Mail size={19} /> rodrigovlima06@gmail.com

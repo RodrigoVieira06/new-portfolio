@@ -7,8 +7,9 @@ export function About() {
       <div className="about__content">
         <div className="text-backdrop">
           <p className="lead">
-            Desenvolvedor Frontend com trajetória iniciada em 2019 e experiência
-            em produtos web, interfaces e colaboração técnica.
+            Minha trajetória na área de tecnologia começou em 2019. Atuo como
+            desenvolvedor desde 2022, com experiência em produtos web,
+            interfaces e colaboração técnica.
           </p>
           <p>
             Atuo com React, TypeScript e JavaScript na construção de aplicações
@@ -22,9 +23,9 @@ export function About() {
           </p>
         </div>
         <div className="skills-grid">
-          {skills.map(({ name, category, icon: Icon }) => (
+          {skills.map(({ name, category, iconUrl }) => (
             <article className="skill-card" key={name}>
-              <Icon size={23} />
+              <img className="skill-card__icon" src={iconUrl} alt="" />
               <div>
                 <strong>{name}</strong>
                 <span>{category}</span>

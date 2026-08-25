@@ -1,4 +1,5 @@
 import { Menu, Moon, Sun } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import { Button } from './ui/button'
 
 const links = [
@@ -13,6 +14,29 @@ type HeaderProps = {
 }
 
 export function Header({ theme, onThemeToggle }: HeaderProps) {
+  const [activeHref, setActiveHref] = useState<string>()
+
+  useEffect(() => {
+    if (!('IntersectionObserver' in window)) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const activeSection = entries.find((entry) => entry.isIntersecting)
+        if (activeSection) setActiveHref(`#${activeSection.target.id}`)
+      },
+      { rootMargin: '-35% 0px -55%', threshold: 0 },
+    )
+
+    const sections = links
+      .map(([, href]) => document.querySelector(href))
+      .filter((section): section is HTMLElement => section !== null)
+
+    sections.forEach((section) => {
+      observer.observe(section)
+    })
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <header className="header">
       <div className="header__content">
@@ -21,7 +45,12 @@ export function Header({ theme, onThemeToggle }: HeaderProps) {
         </a>
         <nav aria-label="Navegação principal">
           {links.map(([label, href]) => (
-            <a href={href} key={href}>
+            <a
+              href={href}
+              key={href}
+              className={activeHref === href ? 'is-active' : undefined}
+              aria-current={activeHref === href ? 'location' : undefined}
+            >
               {label}
             </a>
           ))}

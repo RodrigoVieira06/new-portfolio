@@ -1,6 +1,3 @@
-import type { LucideIcon } from 'lucide-react'
-import { Code2, Database, Layers3, ServerCog, TestTube2 } from 'lucide-react'
-
 export type Experience = {
   company: string
   role: string
@@ -9,7 +6,7 @@ export type Experience = {
   highlights: string[]
   accent: string
 }
-export type Skill = { name: string; category: string; icon: LucideIcon }
+export type Skill = { name: string; category: string; iconUrl: string }
 export const experiences: Experience[] = [
   {
     company: 'Hitss Brasil',
@@ -69,10 +66,44 @@ export const experiences: Experience[] = [
   },
 ]
 export const skills: Skill[] = [
-  { name: 'React', category: 'Interfaces', icon: Code2 },
-  { name: 'TypeScript', category: 'Linguagem', icon: Code2 },
-  { name: 'Microfrontends', category: 'Arquitetura', icon: Layers3 },
-  { name: 'FastAPI & BFF', category: 'Integrações', icon: ServerCog },
-  { name: 'Zustand', category: 'Estado', icon: Database },
-  { name: 'Jest & RTL', category: 'Qualidade', icon: TestTube2 },
+  {
+    name: 'React',
+    category: 'Interfaces',
+    iconUrl: 'https://cdn.simpleicons.org/react/0D625D',
+  },
+  {
+    name: 'TypeScript',
+    category: 'Linguagem',
+    iconUrl: 'https://cdn.simpleicons.org/typescript/0D625D',
+  },
+  {
+    name: 'Angular',
+    category: 'Interfaces',
+    iconUrl: 'https://cdn.simpleicons.org/angular/0D625D',
+  },
+  {
+    name: 'Next.js',
+    category: 'Framework',
+    iconUrl: 'https://cdn.simpleicons.org/nextdotjs/0D625D',
+  },
+  {
+    name: 'Vite',
+    category: 'Build',
+    iconUrl: 'https://cdn.simpleicons.org/vite/0D625D',
+  },
+  {
+    name: 'Jest',
+    category: 'Testes',
+    iconUrl: 'https://cdn.simpleicons.org/jest/0D625D',
+  },
+  {
+    name: 'Docker',
+    category: 'Infraestrutura',
+    iconUrl: 'https://cdn.simpleicons.org/docker/0D625D',
+  },
+  {
+    name: 'Flutter',
+    category: 'Mobile',
+    iconUrl: 'https://cdn.simpleicons.org/flutter/0D625D',
+  },
 ]

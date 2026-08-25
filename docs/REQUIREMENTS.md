@@ -21,6 +21,7 @@ As informações profissionais são mantidas em `src/data/portfolio.ts` e inclue
 
 - Escrever em português brasileiro, de modo concreto e profissional.
 - Direcionar a mensagem a oportunidades CLT.
+- Não declarar disponibilidade para oportunidades sem confirmação explícita.
 - Priorizar responsabilidades, tecnologias e histórico verificável.
 - Evitar promessas, chamadas de venda, slogans e frases de impacto.
 
@@ -30,6 +31,7 @@ As informações profissionais são mantidas em `src/data/portfolio.ts` e inclue
 - Tokens principais: `#0d625d` no tema claro e `#7fc8bf` no tema escuro.
 - Manter a interface minimalista, responsiva, com foco visível e contraste adequado.
 - Partículas são decorativas: não podem dificultar leitura ou interação. Sob blocos de texto, devem receber desfoque adicional por uma superfície translúcida.
+- As habilidades usam logotipos decorativos de tecnologias confirmadas, mantendo seus nomes como texto acessível.
 
 ## Critérios de aceite para mudanças
 

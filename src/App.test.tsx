@@ -3,13 +3,14 @@ import userEvent from '@testing-library/user-event'
 import { App } from './App'
 
 describe('App', () => {
-  it('apresenta as áreas principais do portfólio', () => {
+  it('apresenta o nome, função e as áreas principais do portfólio', () => {
     render(<App />)
     expect(
       screen.getByRole('heading', {
-        name: /desenvolvimento frontend para produtos digitais/i,
+        name: /rodrigo vieira lima/i,
       }),
     ).toBeInTheDocument()
+    expect(screen.getByText('Desenvolvedor Frontend')).toBeInTheDocument()
     expect(
       screen.getByRole('heading', { name: /perfil profissional/i }),
     ).toBeInTheDocument()
@@ -21,12 +22,12 @@ describe('App', () => {
     ).toBeInTheDocument()
   })
 
-  it('apresenta disponibilidade para oportunidades CLT', () => {
+  it('não exibe texto de disponibilidade profissional', () => {
     render(<App />)
 
     expect(
-      screen.getByText(/disponível para oportunidades clt/i),
-    ).toBeInTheDocument()
+      screen.queryByText(/disponível para oportunidades/i),
+    ).not.toBeInTheDocument()
   })
 
   it('alterna o tema por um controle acessível', async () => {
