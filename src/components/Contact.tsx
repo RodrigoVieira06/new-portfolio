@@ -1,4 +1,4 @@
-import { Mail, Send } from 'lucide-react'
+import { GitFork, Mail, Phone, Send } from 'lucide-react'
 import { useContactForm } from '../hooks/useContactForm'
 import { SectionHeading } from './SectionHeading'
 import { Button } from './ui/button'
@@ -13,16 +13,28 @@ export function Contact() {
   } = useContactForm()
   return (
     <section className="section contact" id="contato">
-      <SectionHeading eyebrow="04 / CONTATO" title="Contato" />
+      <SectionHeading eyebrow="05 / CONTATO" title="Vamos conversar" />
       <div className="contact__layout">
         <div className="text-backdrop">
           <p className="lead">
-            Para entrar em contato sobre meu trabalho, use o formulário ou o
-            e-mail abaixo.
+            Para conversar sobre minha experiência profissional e oportunidades
+            em desenvolvimento frontend, use o formulário ou o e-mail abaixo.
           </p>
-          <a className="contact__email" href="mailto:rodrigovlima06@gmail.com">
-            <Mail size={19} /> rodrigovlima06@gmail.com
-          </a>
+          <div className="contact__links">
+            <a href="mailto:rodrigovlima06@gmail.com">
+              <Mail size={19} /> rodrigovlima06@gmail.com
+            </a>
+            <a href="tel:+5521990012455">
+              <Phone size={19} /> (21) 99001-2455
+            </a>
+            <a
+              href="https://github.com/RodrigoVieira06"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitFork size={19} /> github.com/RodrigoVieira06
+            </a>
+          </div>
         </div>
         <form onSubmit={onSubmit} noValidate>
           <label htmlFor="contact-name">

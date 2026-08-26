@@ -6,7 +6,8 @@ import { Button } from './ui/button'
 const links = [
   ['Sobre', '#sobre'],
   ['Experiência', '#experiencia'],
-  ['Portfólio', '#portfolio'],
+  ['Projetos', '#portfolio'],
+  ['Formação', '#formacao'],
   ['Contato', '#contato'],
 ]
 type HeaderProps = {

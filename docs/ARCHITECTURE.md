@@ -13,15 +13,18 @@ App
 ├── Header              navegação por âncoras, fixa, e alternância de tema
 ├── Hero                apresentação progressiva, CTAs e retrato pessoal
 ├── About               narrativa e habilidades
-├── Experience          dados de carreira em timeline
-├── Portfolio           estado vazio preparado para cases
+├── Experience          carrossel de empresas e responsabilidades
+│   └── Carousel        navegação acessível e estado do item ativo
+├── Portfolio           carrossel de projetos independentes
+│   └── Carousel
+├── Education           formação acadêmica confirmada
 └── Contact             formulário validado e mailto seguro
     └── useContactForm  schema Zod + React Hook Form
 ```
 
 ## Decisões
 
-- `src/data/portfolio.ts` é a fonte única para experiências e skills. Alterar conteúdo lá antes de alterar a visualização.
+- `src/data/portfolio.ts` é a fonte única para experiências, projetos, formação e skills. Alterar conteúdo lá antes de alterar a visualização.
 - As seções compõem a página e não devem acessar APIs diretamente.
 - `src/components/ui` concentra primitivos no padrão shadcn: composição, variantes CVA e `cn`.
 - SCSS é global por escolha deliberada para uma landing compacta. Novos estilos devem usar o prefixo da seção/componente.
@@ -34,6 +37,8 @@ App
 - `ParticleBackground` é decorativo, usa `aria-hidden`, não responde ao cursor e respeita `prefers-reduced-motion`.
 - A classe global `text-backdrop` é aplicada aos blocos textuais para desfocar as partículas abaixo deles e preservar a leitura.
 - A grade de habilidades recebe `iconUrl` dos dados profissionais e renderiza logotipos decorativos, com o nome da tecnologia preservado no conteúdo.
+- `Carousel` mantém localmente o índice ativo, exibe uma peça por vez e oferece navegação circular por botões, indicadores e setas do teclado. Não há avanço automático, preservando controle e legibilidade.
+- `Experience` associa as imagens de `src/assets/experience/` às empresas. `Portfolio` usa `src/assets/projects/` e mantém LIPCAT fora do histórico empresarial. `Education` usa `src/assets/education/` para FAETERJ-Rio e IFRJ.
 - O formulário usa `mailto:`. Não inventar endpoint. Se houver backend, trocar a implementação de `onSubmit` no hook e manter o schema e os testes.
 
 ## Regras de evolução
@@ -46,7 +51,7 @@ App
 
 ## Qualidade
 
-- Jest e Testing Library cobrem o conteúdo estrutural, disponibilidade CLT, alternância de tema e validação do formulário.
+- Jest e Testing Library cobrem o conteúdo estrutural, disponibilidade CLT, alternância de tema, navegação do carrossel, conteúdo profissional, formação e validação do formulário.
 - Biome faz lint, formatação e organização de imports.
 - Lefthook executa lint e testes no pre-commit. `make check` reúne lint, testes e build.
 - Consulte `AGENTS.md` e `docs/REQUIREMENTS.md` para as regras completas de evolução.

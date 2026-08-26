@@ -7,19 +7,21 @@ export function About() {
       <div className="about__content">
         <div className="text-backdrop">
           <p className="lead">
-            Minha trajetória na área de tecnologia começou em 2019. Atuo como
-            desenvolvedor desde 2022, com experiência em produtos web,
-            interfaces e colaboração técnica.
+            Iniciei minha jornada em tecnologia em 2019 e atuo profissionalmente
+            no desenvolvimento de software desde 2022, hoje como Desenvolvedor
+            Frontend Sênior.
           </p>
           <p>
-            Atuo com React, TypeScript e JavaScript na construção de aplicações
-            web robustas. Tenho experiência em microfrontends, design systems,
-            BFFs e testes, sempre equilibrando excelência técnica, contexto de
-            negócio e uma experiência de uso que faça sentido.
+            Minha atuação é concentrada em React, TypeScript e JavaScript, com
+            experiência em arquitetura de microfrontends, componentização,
+            gerenciamento de estado, integração com APIs e manutenção de BFFs em
+            NestJS e FastAPI.
           </p>
           <p>
-            Também contribuo com padrões de interface, componentes
-            reutilizáveis, documentação e troca técnica com o time.
+            Também defino padrões técnicos, construo bibliotecas de componentes,
+            escrevo testes unitários e compartilho conhecimento com equipes de
+            desenvolvimento, considerando qualidade técnica, experiência de uso
+            e necessidades do produto.
           </p>
         </div>
         <div className="skills-grid">

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { About } from './components/About'
 import { Contact } from './components/Contact'
+import { Education } from './components/Education'
 import { Experience } from './components/Experience'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
@@ -43,6 +44,7 @@ export function App() {
             <About />
             <Experience />
             <Portfolio />
+            <Education />
             <Contact />
           </>
         )}
@@ -50,7 +52,7 @@ export function App() {
       {!isOpening && (
         <footer className="text-backdrop">
           <span>© {new Date().getFullYear()} Rodrigo Vieira Lima</span>
-          <span>Feito com intenção e React.</span>
+          <span>Desenvolvido com React e TypeScript.</span>
         </footer>
       )}
     </div>

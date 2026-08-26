@@ -42,12 +42,16 @@ describe('App', () => {
     expect(
       screen.getByRole('img', { name: /rodrigo vieira lima/i }),
     ).toBeInTheDocument()
-    expect(screen.queryByText('Desenvolvedor Frontend')).not.toBeInTheDocument()
+    expect(
+      screen.queryByText('Desenvolvedor Frontend Sênior'),
+    ).not.toBeInTheDocument()
 
     act(() => {
       jest.advanceTimersByTime(1000)
     })
-    expect(screen.getByText('Desenvolvedor Frontend')).toBeInTheDocument()
+    expect(
+      screen.getByText('Desenvolvedor Frontend Sênior'),
+    ).toBeInTheDocument()
     expect(screen.queryByRole('navigation')).not.toBeInTheDocument()
 
     act(() => {
@@ -60,15 +64,18 @@ describe('App', () => {
         name: /rodrigo vieira lima/i,
       }),
     ).toBeInTheDocument()
-    expect(screen.getByText('Desenvolvedor Frontend')).toBeInTheDocument()
+    expect(screen.getAllByText('Desenvolvedor Frontend Sênior')).toHaveLength(2)
     expect(
       screen.getByRole('heading', { name: /perfil profissional/i }),
     ).toBeInTheDocument()
     expect(
-      screen.getByRole('heading', { name: /experiência profissional/i }),
+      screen.getByRole('heading', { name: /trajetória profissional/i }),
     ).toBeInTheDocument()
     expect(
-      screen.getByRole('heading', { name: /contato/i }),
+      screen.getByRole('heading', { name: /formação acadêmica/i }),
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /vamos conversar/i }),
     ).toBeInTheDocument()
   })
 

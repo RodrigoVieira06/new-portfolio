@@ -6,17 +6,19 @@ O portfólio apresenta Rodrigo Vieira Lima para oportunidades CLT em desenvolvim
 
 ## Conteúdo confirmado
 
-As informações profissionais são mantidas em `src/data/portfolio.ts` e incluem experiência na Hitss Brasil, Levva, QUAY, Nasajon e LIPCAT, além de competências em React, TypeScript, microfrontends, FastAPI/BFF, Zustand e Jest/RTL. Alterações devem ser confirmadas antes de entrar na página.
+As informações profissionais são mantidas em `src/data/portfolio.ts` e incluem experiência na Hitss Brasil, Levva, QUAY e Nasajon; o projeto independente LIPCAT; formação na FAETERJ-Rio e no IFRJ; e as competências confirmadas no currículo. Alterações devem ser confirmadas antes de entrar na página.
 
 ## Requisitos funcionais
 
-1. Exibir as seções Sobre, Experiência, Portfólio e Contato em uma única página.
+1. Exibir as seções Sobre, Experiência, Projetos, Formação e Contato em uma única página.
 2. Manter header fixo com navegação por âncoras e compensação para o topo.
 3. Oferecer temas claro e escuro; usar a preferência do sistema no primeiro acesso e permitir troca manual persistida.
 4. Exibir fundo decorativo de partículas desfocadas, contínuo, sem interação por mouse e desativável para pessoas que preferem reduzir movimento.
 5. Exibir formulário com validação de nome, e-mail e mensagem e abertura segura de `mailto:`; não enviar nem salvar dados.
-6. Manter a seção de portfólio como estado de preparação até existirem cases publicáveis.
-7. Exibir uma abertura inicial em quatro etapas de um segundo: título, retrato, função e descrição, depois o restante da página. A rolagem deve ficar bloqueada até a última etapa; pessoas com `prefers-reduced-motion` recebem a página completa de imediato.
+6. Exibir experiências e projetos em carrosséis separados, com controles por botões, indicadores e teclado, sem rotação automática.
+7. Apresentar o LIPCAT como projeto independente, sem período ou vínculo empresarial.
+8. Exibir a formação acadêmica confirmada com as identidades visuais da FAETERJ-Rio e do IFRJ.
+9. Exibir uma abertura inicial em quatro etapas de um segundo: título, retrato, função e descrição, depois o restante da página. A rolagem deve ficar bloqueada até a última etapa; pessoas com `prefers-reduced-motion` recebem a página completa de imediato.
 
 ## Requisitos de conteúdo e tom
 
@@ -34,6 +36,7 @@ As informações profissionais são mantidas em `src/data/portfolio.ts` e inclue
 - Partículas são decorativas: não podem dificultar leitura ou interação. Sob blocos de texto, devem receber desfoque adicional por uma superfície translúcida.
 - As habilidades usam logotipos decorativos de tecnologias confirmadas, mantendo seus nomes como texto acessível.
 - Arquivos de marca devem permanecer em `src/assets/logo/` e fotos pessoais em `src/assets/personal/`. Ao incluir novas imagens, organize-as em subpastas por finalidade e mantenha `src/assets/` sem assets na raiz.
+- Marcas de empregadores ficam em `src/assets/experience/`, imagens de projetos em `src/assets/projects/` e instituições de ensino em `src/assets/education/`.
 - O card de retrato do Hero exibe somente a foto local, recortada para preencher o espaço e com orientação original. Ele fica visualmente à esquerda do texto em todos os tamanhos; não deve conter gradiente, iniciais ou cargo. Apenas o link do LinkedIn permanece como detalhe externo à esquerda do card.
 
 ## Critérios de aceite para mudanças

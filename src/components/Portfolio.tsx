@@ -1,23 +1,41 @@
-import { ArrowUpRight, FolderOpen } from 'lucide-react'
+import { projects } from '../data/portfolio'
+import { Carousel } from './Carousel'
 import { SectionHeading } from './SectionHeading'
+
 export function Portfolio() {
   return (
     <section className="section work" id="portfolio">
       <SectionHeading
-        eyebrow="03 / PORTFÓLIO"
-        title="Projetos e estudos de caso"
-        description="Esta seção receberá projetos que possam ser compartilhados publicamente."
+        eyebrow="03 / PROJETOS"
+        title="Projetos selecionados"
+        description="Trabalhos desenvolvidos fora da trajetória em empresas, apresentados pelo contexto e pelas decisões técnicas."
       />
-      <div className="work__empty">
-        <FolderOpen size={32} />
-        <div>
-          <h3>Projetos em preparação</h3>
-          <p>
-            Novos estudos de caso serão incluídos quando estiverem disponíveis.
-          </p>
-        </div>
-        <ArrowUpRight size={24} />
-      </div>
+      <Carousel
+        label="Projetos selecionados"
+        itemLabels={projects.map(({ name }) => name)}
+      >
+        {projects.map((project) => (
+          <article className="project-card" key={project.name}>
+            <div className="project-card__visual">
+              <img
+                src={project.image}
+                alt={`Logo do projeto ${project.name}`}
+              />
+              <span>{project.context}</span>
+            </div>
+            <div className="project-card__content text-backdrop">
+              <p>Projeto / Desenvolvimento web</p>
+              <h3>{project.name}</h3>
+              <p className="project-card__summary">{project.summary}</p>
+              <ul>
+                {project.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </Carousel>
     </section>
   )
 }

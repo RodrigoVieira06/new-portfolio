@@ -47,10 +47,11 @@ export function Hero({ openingStage }: HeroProps) {
           </h1>
           {showDescription && (
             <div className="hero__description">
-              <p className="hero__role">Desenvolvedor Frontend</p>
+              <p className="hero__role">Desenvolvedor Frontend Sênior</p>
               <p className="hero__intro">
-                Experiência em React, TypeScript, design systems, microfrontends
-                e aplicações web.
+                Atuo na construção e evolução de aplicações web com React,
+                TypeScript, arquitetura de microfrontends, integração com APIs e
+                desenvolvimento de BFFs.
               </p>
             </div>
           )}
