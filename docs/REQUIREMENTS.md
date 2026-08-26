@@ -32,7 +32,8 @@ As informações profissionais são mantidas em `src/data/portfolio.ts` e inclue
 - Manter a interface minimalista, responsiva, com foco visível e contraste adequado.
 - Partículas são decorativas: não podem dificultar leitura ou interação. Sob blocos de texto, devem receber desfoque adicional por uma superfície translúcida.
 - As habilidades usam logotipos decorativos de tecnologias confirmadas, mantendo seus nomes como texto acessível.
-- Arquivos de marca devem permanecer em `src/assets/logo/`. Ao incluir novas imagens, organize-as em subpastas por finalidade e mantenha `src/assets/` sem arquivos de logo na raiz.
+- Arquivos de marca devem permanecer em `src/assets/logo/` e fotos pessoais em `src/assets/personal/`. Ao incluir novas imagens, organize-as em subpastas por finalidade e mantenha `src/assets/` sem assets na raiz.
+- O card de retrato do Hero exibe somente a foto local, recortada para preencher o espaço e com orientação original. Ele fica visualmente à esquerda do texto em todos os tamanhos; não deve conter gradiente, iniciais ou cargo. Apenas o link do LinkedIn permanece como detalhe externo à esquerda do card.
 
 ## Critérios de aceite para mudanças
 

@@ -39,7 +39,8 @@ App
 - O menu fica fixo no topo; preserve `scroll-padding-top` quando ajustar seu tamanho.
 - Há temas claro e escuro. A preferência inicial segue o sistema, pode ser alterada no header e é salva em `localStorage` como `theme`.
 - A logo do header é `src/assets/logo/logo-rv.png`, um PNG transparente com apenas o símbolo `{RV}`. Não reintroduza fundo, palavras ou versões separadas por tema.
-- `src/assets/logo/` concentra todos os arquivos de logo. Não deixe logos diretamente na raiz de `src/assets/`; novos tipos de imagem devem usar uma subpasta semântica própria quando forem adicionados.
+- `src/assets/logo/` concentra todos os arquivos de logo e `src/assets/personal/` as fotos pessoais. Não deixe assets diretamente na raiz de `src/assets/`; novos tipos de imagem devem usar uma subpasta semântica própria quando forem adicionados.
+- O retrato principal é `src/assets/personal/personalPhoto.png`: no Hero, ele ocupa todo o card e é recortado por CSS, mantendo sua orientação original. Visualmente, o card fica à esquerda do texto; preserve a ordem semântica do texto antes dele. Mantenha o `alt="Rodrigo Vieira Lima"` e não inclua texto sobre a foto; o link do LinkedIn permanece como detalhe externo, à esquerda do card.
 - O tema usa branco, preto e os tons da logo: ciano (`#00d8c9`), laranja (`#ff9d3d`) e rosa (`#f63770`). Preserve contraste adequado em ambos os temas.
 - O fundo contém apenas partículas desfocadas decorativas. Ele deve permanecer com `aria-hidden`, não capturar ponteiro e respeitar `prefers-reduced-motion`.
 - Todo bloco textual exposto sobre o fundo deve usar a classe `text-backdrop`, que aplica desfoque adicional às partículas sem alterar seu conteúdo.

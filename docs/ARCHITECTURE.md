@@ -10,7 +10,7 @@ Este repositório contém o portfólio público de Rodrigo Vieira Lima, direcion
 App
 ├── ParticleBackground  partículas decorativas desfocadas e contínuas
 ├── Header              navegação por âncoras, fixa, e alternância de tema
-├── Hero                proposta de valor e CTAs
+├── Hero                apresentação, CTAs e retrato pessoal
 ├── About               narrativa e habilidades
 ├── Experience          dados de carreira em timeline
 ├── Portfolio           estado vazio preparado para cases
@@ -26,7 +26,8 @@ App
 - SCSS é global por escolha deliberada para uma landing compacta. Novos estilos devem usar o prefixo da seção/componente.
 - O tema é controlado por `data-theme` no elemento `html`. A preferência segue o sistema no primeiro acesso e fica persistida como `theme`.
 - O `Header` usa `src/assets/logo/logo-rv.png`, logo transparente com apenas o símbolo `{RV}`; ela funciona nos dois temas sem troca de arquivo.
-- Os assets locais são organizados por finalidade. `src/assets/logo/` concentra os arquivos de marca; demais imagens devem entrar em subpastas semânticas ao serem incluídas, sem misturar logos na raiz de `src/assets/`.
+- Os assets locais são organizados por finalidade. `src/assets/logo/` concentra os arquivos de marca e `src/assets/personal/` as fotos pessoais; demais imagens devem entrar em subpastas semânticas ao serem incluídas, sem assets na raiz de `src/assets/`.
+- O Hero usa `src/assets/personal/personalPhoto.png` em um `img` acessível, preenchendo e recortando o card com `object-fit: cover`, sem alterar sua orientação. O Grid posiciona visualmente o retrato à esquerda do texto, preservando o texto primeiro na ordem semântica. O card não contém gradiente nem textos, e o link do LinkedIn fica externo, à esquerda dele.
 - A paleta de destaque deriva da logo: ciano, laranja e rosa, combinados com superfícies brancas e pretas. Os tokens ficam em `src/styles/globals.scss`.
 - `ParticleBackground` é decorativo, usa `aria-hidden`, não responde ao cursor e respeita `prefers-reduced-motion`.
 - A classe global `text-backdrop` é aplicada aos blocos textuais para desfocar as partículas abaixo deles e preservar a leitura.
@@ -51,4 +52,4 @@ App
 ## Limites
 
 - Não há backend, analytics, CMS ou armazenamento de formulário.
-- O retrato no hero é hoje uma composição gráfica com as iniciais `RV`. Ao receber o arquivo local da foto, substituí-la por um `img` com `alt="Rodrigo Vieira Lima"`, mantendo o layout e dimensões responsivas.
+- O Hero usa a foto local em `src/assets/personal/personalPhoto.png`, apresentada em um `img` com `alt="Rodrigo Vieira Lima"` e dimensões responsivas.

@@ -1,4 +1,5 @@
 import { ArrowDownRight, GitFork, Link } from 'lucide-react'
+import personalPhoto from '../assets/personal/personalPhoto.png'
 import { Button } from './ui/button'
 export function Hero() {
   return (
@@ -31,18 +32,13 @@ export function Hero() {
           </Button>
         </div>
       </div>
-      <div
-        className="hero__visual"
-        role="img"
-        aria-label="Retrato de Rodrigo Vieira"
-      >
+      <div className="hero__visual">
         <div className="hero__portrait">
-          <span>RV</span>
-          <small>
-            Frontend
-            <br />
-            Engineer
-          </small>
+          <img
+            className="hero__portrait-image"
+            src={personalPhoto}
+            alt="Rodrigo Vieira Lima"
+          />
         </div>
         <div className="hero__orbit orbit--one" />
         <div className="hero__orbit orbit--two" />

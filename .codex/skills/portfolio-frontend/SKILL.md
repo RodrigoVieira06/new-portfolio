@@ -47,7 +47,8 @@ O site apresenta Rodrigo para vagas CLT de desenvolvimento frontend. Recrutadore
 - Temas usam `data-theme` no `html`, preferência do sistema no primeiro acesso e persistência em `localStorage` como `theme`.
 - A paleta usa branco, preto e os tons da logo: ciano `#00d8c9`, laranja `#ff9d3d` e rosa `#f63770`, com variantes de contraste por tema.
 - A logo do header é `src/assets/logo/logo-rv.png`, PNG transparente contendo apenas `{RV}`. Não reintroduza fundos raster ou versões por tema.
-- Organize imagens locais por finalidade. `src/assets/logo/` é reservado para todos os arquivos de marca; ao chegar uma nova categoria de imagem, crie uma subpasta semântica em `src/assets/` e não deixe logos na raiz.
+- Organize imagens locais por finalidade. `src/assets/logo/` é reservado para arquivos de marca e `src/assets/personal/` para fotos pessoais; ao chegar uma nova categoria, crie uma subpasta semântica em `src/assets/` e não deixe assets na raiz.
+- O retrato do Hero usa `src/assets/personal/personalPhoto.png` com `alt="Rodrigo Vieira Lima"`. Ele deve preencher o card sem gradiente ou texto, com recorte responsivo e orientação original. Visualmente, o retrato fica antes do texto sem alterar a ordem semântica; o LinkedIn é o único detalhe externo associado ao retrato e fica à esquerda do card.
 - O fundo é exclusivamente `ParticleBackground`: decorativo, sem eventos de ponteiro, com `aria-hidden` e compatível com `prefers-reduced-motion`.
 - Tecnologias confirmadas podem usar logotipos decorativos do Simple Icons, mas o nome da tecnologia deve continuar visível em texto.
 - O formulário é `mailto:` validado; não adicione backend, analytics ou persistência sem solicitação explícita.
