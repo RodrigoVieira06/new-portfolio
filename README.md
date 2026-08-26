@@ -38,6 +38,8 @@ O aplicativo abrirá em `http://localhost:5173`.
 
 ```text
 src/
+  assets/
+    logo/           # Arquivos de marca, incluindo o símbolo transparente {RV}
   components/     # Seções da landing e primitivos de interface
   data/           # Conteúdo profissional tipado
   hooks/          # Regras reutilizáveis (formulário de contato)
@@ -52,7 +54,8 @@ docs/             # Contexto arquitetural para pessoas e IAs
 
 - O conteúdo profissional vem de `src/data/portfolio.ts` e não deve ser inventado.
 - A comunicação é direta e profissional, voltada a recrutadores e oportunidades CLT; não use slogans ou linguagem de venda.
-- A interface mantém temas claro e escuro, com paleta branco, preto e verde-petróleo.
+- A interface mantém temas claro e escuro, com paleta branca, preta e destaques ciano, laranja e rosa derivados da logo.
+- Logos ficam em `src/assets/logo/`; novas imagens devem ser separadas em subpastas semânticas por finalidade.
 - O fundo usa partículas desfocadas apenas como elemento decorativo e respeita a preferência de redução de movimento.
 - Toda mudança de comportamento ou conteúdo relevante deve incluir testes e passar em `make check`.
 

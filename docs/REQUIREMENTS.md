@@ -27,11 +27,12 @@ As informações profissionais são mantidas em `src/data/portfolio.ts` e inclue
 
 ## Direção visual
 
-- Usar branco, preto e verde-petróleo como cor de destaque.
-- Tokens principais: `#0d625d` no tema claro e `#7fc8bf` no tema escuro.
+- Usar branco, preto e os tons ciano, laranja e rosa da logo como cores de destaque.
+- Tokens principais: ciano `#00d8c9`, laranja `#ff9d3d` e rosa `#f63770`, com variantes de contraste por tema.
 - Manter a interface minimalista, responsiva, com foco visível e contraste adequado.
 - Partículas são decorativas: não podem dificultar leitura ou interação. Sob blocos de texto, devem receber desfoque adicional por uma superfície translúcida.
 - As habilidades usam logotipos decorativos de tecnologias confirmadas, mantendo seus nomes como texto acessível.
+- Arquivos de marca devem permanecer em `src/assets/logo/`. Ao incluir novas imagens, organize-as em subpastas por finalidade e mantenha `src/assets/` sem arquivos de logo na raiz.
 
 ## Critérios de aceite para mudanças
 

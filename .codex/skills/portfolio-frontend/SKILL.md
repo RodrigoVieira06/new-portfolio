@@ -45,7 +45,9 @@ O site apresenta Rodrigo para vagas CLT de desenvolvimento frontend. Recrutadore
 - SCSS é global e usa prefixos de componente/seção. Não introduza Tailwind.
 - O header é fixo; mudanças nele devem preservar a compensação de âncora.
 - Temas usam `data-theme` no `html`, preferência do sistema no primeiro acesso e persistência em `localStorage` como `theme`.
-- A paleta usa branco, preto e verde-petróleo: `#0d625d` no claro e `#7fc8bf` no escuro. Não restabeleça verde-limão.
+- A paleta usa branco, preto e os tons da logo: ciano `#00d8c9`, laranja `#ff9d3d` e rosa `#f63770`, com variantes de contraste por tema.
+- A logo do header é `src/assets/logo/logo-rv.png`, PNG transparente contendo apenas `{RV}`. Não reintroduza fundos raster ou versões por tema.
+- Organize imagens locais por finalidade. `src/assets/logo/` é reservado para todos os arquivos de marca; ao chegar uma nova categoria de imagem, crie uma subpasta semântica em `src/assets/` e não deixe logos na raiz.
 - O fundo é exclusivamente `ParticleBackground`: decorativo, sem eventos de ponteiro, com `aria-hidden` e compatível com `prefers-reduced-motion`.
 - Tecnologias confirmadas podem usar logotipos decorativos do Simple Icons, mas o nome da tecnologia deve continuar visível em texto.
 - O formulário é `mailto:` validado; não adicione backend, analytics ou persistência sem solicitação explícita.

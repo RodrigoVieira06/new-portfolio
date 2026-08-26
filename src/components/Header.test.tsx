@@ -48,4 +48,15 @@ describe('Header', () => {
       'location',
     )
   })
+
+  it('usa a logo transparente da marca', () => {
+    const { container } = render(
+      <Header theme="light" onThemeToggle={jest.fn()} />,
+    )
+
+    expect(container.querySelector('.brand__logo')).toHaveAttribute(
+      'src',
+      'test-file-stub',
+    )
+  })
 })

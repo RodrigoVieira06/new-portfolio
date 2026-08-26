@@ -1,5 +1,6 @@
 import { Menu, Moon, Sun } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import logo from '../assets/logo/logo-rv.png'
 import { Button } from './ui/button'
 
 const links = [
@@ -41,7 +42,7 @@ export function Header({ theme, onThemeToggle }: HeaderProps) {
     <header className="header">
       <div className="header__content">
         <a className="brand" href="#inicio" aria-label="Página inicial">
-          RV<span>.</span>
+          <img className="brand__logo" src={logo} alt="" />
         </a>
         <nav aria-label="Navegação principal">
           {links.map(([label, href]) => (

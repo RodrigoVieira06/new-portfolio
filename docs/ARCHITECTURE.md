@@ -25,7 +25,9 @@ App
 - `src/components/ui` concentra primitivos no padrão shadcn: composição, variantes CVA e `cn`.
 - SCSS é global por escolha deliberada para uma landing compacta. Novos estilos devem usar o prefixo da seção/componente.
 - O tema é controlado por `data-theme` no elemento `html`. A preferência segue o sistema no primeiro acesso e fica persistida como `theme`.
-- A paleta de destaque é verde-petróleo, combinada com superfícies brancas e pretas. Os tokens ficam em `src/styles/globals.scss`.
+- O `Header` usa `src/assets/logo/logo-rv.png`, logo transparente com apenas o símbolo `{RV}`; ela funciona nos dois temas sem troca de arquivo.
+- Os assets locais são organizados por finalidade. `src/assets/logo/` concentra os arquivos de marca; demais imagens devem entrar em subpastas semânticas ao serem incluídas, sem misturar logos na raiz de `src/assets/`.
+- A paleta de destaque deriva da logo: ciano, laranja e rosa, combinados com superfícies brancas e pretas. Os tokens ficam em `src/styles/globals.scss`.
 - `ParticleBackground` é decorativo, usa `aria-hidden`, não responde ao cursor e respeita `prefers-reduced-motion`.
 - A classe global `text-backdrop` é aplicada aos blocos textuais para desfocar as partículas abaixo deles e preservar a leitura.
 - A grade de habilidades recebe `iconUrl` dos dados profissionais e renderiza logotipos decorativos, com o nome da tecnologia preservado no conteúdo.

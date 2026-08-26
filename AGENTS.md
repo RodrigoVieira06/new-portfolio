@@ -38,7 +38,9 @@ App
 - Mantenha componentes de interface em `src/components/ui/`, usando o padrão existente com CVA, Radix Slot e `cn`.
 - O menu fica fixo no topo; preserve `scroll-padding-top` quando ajustar seu tamanho.
 - Há temas claro e escuro. A preferência inicial segue o sistema, pode ser alterada no header e é salva em `localStorage` como `theme`.
-- O tema usa branco, preto e verde-petróleo: no claro `#0d625d`; no escuro `#7fc8bf`. Não retorne ao verde-limão.
+- A logo do header é `src/assets/logo/logo-rv.png`, um PNG transparente com apenas o símbolo `{RV}`. Não reintroduza fundo, palavras ou versões separadas por tema.
+- `src/assets/logo/` concentra todos os arquivos de logo. Não deixe logos diretamente na raiz de `src/assets/`; novos tipos de imagem devem usar uma subpasta semântica própria quando forem adicionados.
+- O tema usa branco, preto e os tons da logo: ciano (`#00d8c9`), laranja (`#ff9d3d`) e rosa (`#f63770`). Preserve contraste adequado em ambos os temas.
 - O fundo contém apenas partículas desfocadas decorativas. Ele deve permanecer com `aria-hidden`, não capturar ponteiro e respeitar `prefers-reduced-motion`.
 - Todo bloco textual exposto sobre o fundo deve usar a classe `text-backdrop`, que aplica desfoque adicional às partículas sem alterar seu conteúdo.
 - A grade de habilidades usa logotipos decorativos do Simple Icons; mantenha o nome da tecnologia em texto e use apenas tecnologias confirmadas em `src/data/portfolio.ts`.
@@ -53,7 +55,7 @@ App
 ## Qualidade obrigatória
 
 - Atualize ou inclua testes ao alterar comportamento, conteúdo relevante ou fluxos de interface.
-- Use Jest e Testing Library. Os testes atuais cobrem áreas principais, disponibilidade CLT, alternância de tema e validação do formulário.
+- Use Jest e Testing Library. Os testes atuais cobrem áreas principais, alternância de tema, logo por tema, navegação ativa e validação do formulário.
 - Antes de entregar, execute `make check` (lint, testes e build). Se o wrapper do pnpm estiver indisponível, execute os binários locais equivalentes e informe o motivo.
 - O pre-commit executa `pnpm lint` e `pnpm test`; mantenha ambos aprovados.
 - Formate e organize imports com Biome. Não use `any`.
