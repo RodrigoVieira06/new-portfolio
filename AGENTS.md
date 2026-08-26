@@ -24,7 +24,7 @@ Este é o portfólio público de Rodrigo Vieira Lima, voltado a processos seleti
 App
 ├── ParticleBackground  camada decorativa animada e inacessível ao leitor de tela
 ├── Header              navegação fixa e alternância de tema
-├── Hero                posicionamento profissional e CTAs
+├── Hero                abertura em etapas, posicionamento profissional e CTAs
 ├── About               resumo profissional e habilidades
 ├── Experience          timeline baseada em dados tipados
 ├── Portfolio           espaço preparado para cases públicos
@@ -38,9 +38,10 @@ App
 - Mantenha componentes de interface em `src/components/ui/`, usando o padrão existente com CVA, Radix Slot e `cn`.
 - O menu fica fixo no topo; preserve `scroll-padding-top` quando ajustar seu tamanho.
 - Há temas claro e escuro. A preferência inicial segue o sistema, pode ser alterada no header e é salva em `localStorage` como `theme`.
+- Na primeira visita, a página faz uma abertura de quatro segundos: título aos 1s, retrato aos 2s, função e descrição aos 3s e o restante da página aos 4s. Cada novo bloco deve ter transição suave própria. Enquanto ela ocorre, a rolagem fica bloqueada. Para `prefers-reduced-motion`, renderize a página completa imediatamente, sem espera nem bloqueio.
 - A logo do header é `src/assets/logo/logo-rv.png`, um PNG transparente com apenas o símbolo `{RV}`. Não reintroduza fundo, palavras ou versões separadas por tema.
 - `src/assets/logo/` concentra todos os arquivos de logo e `src/assets/personal/` as fotos pessoais. Não deixe assets diretamente na raiz de `src/assets/`; novos tipos de imagem devem usar uma subpasta semântica própria quando forem adicionados.
-- O retrato principal é `src/assets/personal/personalPhoto.png`: no Hero, ele ocupa todo o card e é recortado por CSS, mantendo sua orientação original. Visualmente, o card fica à esquerda do texto; preserve a ordem semântica do texto antes dele. Mantenha o `alt="Rodrigo Vieira Lima"` e não inclua texto sobre a foto; o link do LinkedIn permanece como detalhe externo, à esquerda do card.
+- O retrato principal é `src/assets/personal/personalPhoto.jpg`: no Hero, ele ocupa todo o card e é recortado por CSS, mantendo sua orientação original. Pré-carregue e decodifique a foto antes do fade de entrada, e informe suas dimensões intrínsecas para evitar saltos de layout. Visualmente, o card fica à esquerda do texto; preserve a ordem semântica do texto antes dele. Reserve a altura final do bloco de texto durante a abertura. Mantenha o `alt="Rodrigo Vieira Lima"` e não inclua texto sobre a foto; o link do LinkedIn permanece como detalhe externo, à esquerda do card.
 - O tema usa branco, preto e os tons da logo: ciano (`#00d8c9`), laranja (`#ff9d3d`) e rosa (`#f63770`). Preserve contraste adequado em ambos os temas.
 - O fundo contém apenas partículas desfocadas decorativas. Ele deve permanecer com `aria-hidden`, não capturar ponteiro e respeitar `prefers-reduced-motion`.
 - Todo bloco textual exposto sobre o fundo deve usar a classe `text-backdrop`, que aplica desfoque adicional às partículas sem alterar seu conteúdo.

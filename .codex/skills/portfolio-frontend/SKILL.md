@@ -45,10 +45,11 @@ O site apresenta Rodrigo para vagas CLT de desenvolvimento frontend. Recrutadore
 - SCSS é global e usa prefixos de componente/seção. Não introduza Tailwind.
 - O header é fixo; mudanças nele devem preservar a compensação de âncora.
 - Temas usam `data-theme` no `html`, preferência do sistema no primeiro acesso e persistência em `localStorage` como `theme`.
+- A abertura inicial é controlada por `useOpeningSequence`: aguarde um segundo entre título, retrato, descrição e página completa, bloqueando a rolagem até o fim. Cada bloco revelado deve ter sua própria animação de entrada. Sempre pule a espera e o bloqueio se `prefers-reduced-motion` estiver ativo.
 - A paleta usa branco, preto e os tons da logo: ciano `#00d8c9`, laranja `#ff9d3d` e rosa `#f63770`, com variantes de contraste por tema.
 - A logo do header é `src/assets/logo/logo-rv.png`, PNG transparente contendo apenas `{RV}`. Não reintroduza fundos raster ou versões por tema.
 - Organize imagens locais por finalidade. `src/assets/logo/` é reservado para arquivos de marca e `src/assets/personal/` para fotos pessoais; ao chegar uma nova categoria, crie uma subpasta semântica em `src/assets/` e não deixe assets na raiz.
-- O retrato do Hero usa `src/assets/personal/personalPhoto.png` com `alt="Rodrigo Vieira Lima"`. Ele deve preencher o card sem gradiente ou texto, com recorte responsivo e orientação original. Visualmente, o retrato fica antes do texto sem alterar a ordem semântica; o LinkedIn é o único detalhe externo associado ao retrato e fica à esquerda do card.
+- O retrato do Hero usa `src/assets/personal/personalPhoto.jpg` com `alt="Rodrigo Vieira Lima"`. Ele deve preencher o card sem gradiente ou texto, com recorte responsivo e orientação original. Pré-carregue e decodifique a foto antes de sua animação, declarando suas dimensões intrínsecas. Reserve a altura final do texto para evitar saltos entre os estágios. Visualmente, o retrato fica antes do texto sem alterar a ordem semântica; o LinkedIn é o único detalhe externo associado ao retrato e fica à esquerda do card.
 - O fundo é exclusivamente `ParticleBackground`: decorativo, sem eventos de ponteiro, com `aria-hidden` e compatível com `prefers-reduced-motion`.
 - Tecnologias confirmadas podem usar logotipos decorativos do Simple Icons, mas o nome da tecnologia deve continuar visível em texto.
 - O formulário é `mailto:` validado; não adicione backend, analytics ou persistência sem solicitação explícita.

@@ -6,6 +6,7 @@ import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { ParticleBackground } from './components/ParticleBackground'
 import { Portfolio } from './components/Portfolio'
+import { useOpeningSequence } from './hooks/useOpeningSequence'
 export function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     const savedTheme = localStorage.getItem('theme')
@@ -20,24 +21,38 @@ export function App() {
     localStorage.setItem('theme', theme)
   }, [theme])
 
+  const openingStage = useOpeningSequence()
+  const isOpening = openingStage !== 'complete'
+
   return (
-    <div className="app">
+    <div
+      className={isOpening ? 'app app--opening' : 'app'}
+      data-opening-stage={openingStage}
+    >
       <ParticleBackground />
-      <Header
-        theme={theme}
-        onThemeToggle={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      />
+      {!isOpening && (
+        <Header
+          theme={theme}
+          onThemeToggle={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        />
+      )}
       <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Portfolio />
-        <Contact />
+        <Hero openingStage={openingStage} />
+        {!isOpening && (
+          <>
+            <About />
+            <Experience />
+            <Portfolio />
+            <Contact />
+          </>
+        )}
       </main>
-      <footer className="text-backdrop">
-        <span>© {new Date().getFullYear()} Rodrigo Vieira Lima</span>
-        <span>Feito com intenção e React.</span>
-      </footer>
+      {!isOpening && (
+        <footer className="text-backdrop">
+          <span>© {new Date().getFullYear()} Rodrigo Vieira Lima</span>
+          <span>Feito com intenção e React.</span>
+        </footer>
+      )}
     </div>
   )
 }

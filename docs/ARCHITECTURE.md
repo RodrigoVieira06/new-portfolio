@@ -9,8 +9,9 @@ Este repositório contém o portfólio público de Rodrigo Vieira Lima, direcion
 ```text
 App
 ├── ParticleBackground  partículas decorativas desfocadas e contínuas
+├── useOpeningSequence  controla os estágios da abertura inicial
 ├── Header              navegação por âncoras, fixa, e alternância de tema
-├── Hero                apresentação, CTAs e retrato pessoal
+├── Hero                apresentação progressiva, CTAs e retrato pessoal
 ├── About               narrativa e habilidades
 ├── Experience          dados de carreira em timeline
 ├── Portfolio           estado vazio preparado para cases
@@ -25,9 +26,10 @@ App
 - `src/components/ui` concentra primitivos no padrão shadcn: composição, variantes CVA e `cn`.
 - SCSS é global por escolha deliberada para uma landing compacta. Novos estilos devem usar o prefixo da seção/componente.
 - O tema é controlado por `data-theme` no elemento `html`. A preferência segue o sistema no primeiro acesso e fica persistida como `theme`.
+- `useOpeningSequence` controla a abertura em quatro marcos de um segundo: título, retrato, descrição e página completa. Até o último marco, `App` monta somente o Hero progressivo e usa `app--opening` para bloquear a rolagem. Cada bloco revelado, inclusive `hero__description`, possui sua própria animação de entrada. Com `prefers-reduced-motion`, o hook vai diretamente a `complete`.
 - O `Header` usa `src/assets/logo/logo-rv.png`, logo transparente com apenas o símbolo `{RV}`; ela funciona nos dois temas sem troca de arquivo.
 - Os assets locais são organizados por finalidade. `src/assets/logo/` concentra os arquivos de marca e `src/assets/personal/` as fotos pessoais; demais imagens devem entrar em subpastas semânticas ao serem incluídas, sem assets na raiz de `src/assets/`.
-- O Hero usa `src/assets/personal/personalPhoto.png` em um `img` acessível, preenchendo e recortando o card com `object-fit: cover`, sem alterar sua orientação. O Grid posiciona visualmente o retrato à esquerda do texto, preservando o texto primeiro na ordem semântica. O card não contém gradiente nem textos, e o link do LinkedIn fica externo, à esquerda dele.
+- O Hero usa `src/assets/personal/personalPhoto.jpg` em um `img` acessível, preenchendo e recortando o card com `object-fit: cover`, sem alterar sua orientação. A foto é pré-carregada e decodificada antes de seu fade, com dimensões intrínsecas explícitas. A cópia reserva sua altura final durante a abertura, evitando reposicionamentos quando descrição e ações são montadas. O Grid posiciona visualmente o retrato à esquerda do texto, preservando o texto primeiro na ordem semântica. O card não contém gradiente nem textos, e o link do LinkedIn fica externo, à esquerda dele.
 - A paleta de destaque deriva da logo: ciano, laranja e rosa, combinados com superfícies brancas e pretas. Os tokens ficam em `src/styles/globals.scss`.
 - `ParticleBackground` é decorativo, usa `aria-hidden`, não responde ao cursor e respeita `prefers-reduced-motion`.
 - A classe global `text-backdrop` é aplicada aos blocos textuais para desfocar as partículas abaixo deles e preservar a leitura.
@@ -52,4 +54,4 @@ App
 ## Limites
 
 - Não há backend, analytics, CMS ou armazenamento de formulário.
-- O Hero usa a foto local em `src/assets/personal/personalPhoto.png`, apresentada em um `img` com `alt="Rodrigo Vieira Lima"` e dimensões responsivas.
+- O Hero usa a foto local em `src/assets/personal/personalPhoto.jpg`, apresentada em um `img` com `alt="Rodrigo Vieira Lima"` e dimensões responsivas.

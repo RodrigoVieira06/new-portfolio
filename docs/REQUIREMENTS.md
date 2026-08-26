@@ -16,6 +16,7 @@ As informações profissionais são mantidas em `src/data/portfolio.ts` e inclue
 4. Exibir fundo decorativo de partículas desfocadas, contínuo, sem interação por mouse e desativável para pessoas que preferem reduzir movimento.
 5. Exibir formulário com validação de nome, e-mail e mensagem e abertura segura de `mailto:`; não enviar nem salvar dados.
 6. Manter a seção de portfólio como estado de preparação até existirem cases publicáveis.
+7. Exibir uma abertura inicial em quatro etapas de um segundo: título, retrato, função e descrição, depois o restante da página. A rolagem deve ficar bloqueada até a última etapa; pessoas com `prefers-reduced-motion` recebem a página completa de imediato.
 
 ## Requisitos de conteúdo e tom
 
