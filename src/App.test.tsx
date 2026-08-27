@@ -79,13 +79,15 @@ describe('App', () => {
     ).toBeInTheDocument()
   })
 
-  it('não exibe texto de disponibilidade profissional', () => {
+  it('apresenta o trabalho sem explicitar modalidade de contratação', () => {
     render(<App />)
     completeOpening()
 
+    expect(screen.queryByText(/CLT/i)).not.toBeInTheDocument()
+    expect(screen.queryByText(/disponível para/i)).not.toBeInTheDocument()
     expect(
-      screen.queryByText(/disponível para oportunidades/i),
-    ).not.toBeInTheDocument()
+      screen.getByText(/para conversar sobre meu trabalho, minha trajetória/i),
+    ).toBeVisible()
   })
 
   it('alterna o tema por um controle acessível', async () => {

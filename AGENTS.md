@@ -2,20 +2,21 @@
 
 ## Objetivo do produto
 
-Este é o portfólio público de Rodrigo Vieira Lima, voltado a processos seletivos para contratação CLT em desenvolvimento frontend. A página deve permitir que recrutadores e lideranças técnicas identifiquem rapidamente a experiência profissional, competências e formas de contato.
+Este é o portfólio público de Rodrigo Vieira Lima. A página deve apresentar com clareza quem ele é profissionalmente, os trabalhos que desenvolveu, sua trajetória, competências e formas de contato.
 
 ## Fonte de verdade profissional
 
 - `src/data/portfolio.ts` é a fonte única para empresas, cargos, períodos, resumos, destaques e habilidades.
+- `docs/personal/Profile.pdf` é uma fonte documental complementar exportada do LinkedIn; informações aproveitadas na página devem primeiro ser consolidadas em `src/data/portfolio.ts`.
 - Não inclua experiências, resultados, métricas, projetos, certificações ou tecnologias que não estejam confirmados nesse arquivo ou pelo Rodrigo.
 - Ao adicionar um case público, defina primeiro seu tipo e dados em `src/data/` e só depois crie sua apresentação.
 
 ## Linguagem e conteúdo
 
 - Use português brasileiro, tom direto, profissional e verificável.
-- Priorize clareza para recrutadores: cargo, contexto, responsabilidades, tecnologias e contato.
-- O público principal são processos CLT. Não use linguagem de freelancing, venda de serviços ou promessas comerciais.
-- Não afirme disponibilidade para oportunidades sem confirmação explícita do Rodrigo.
+- Priorize a compreensão do perfil profissional: cargo, contexto, responsabilidades, tecnologias, evolução de carreira e contato.
+- Apresente trabalhos e trajetória por seu contexto profissional e técnico, sem direcionar o texto a processos seletivos.
+- Não transforme o conteúdo em anúncio de disponibilidade, oferta de serviços ou promessa comercial.
 - Evite slogans, frases de impacto, superlativos e clichês como “transformar negócios”, “fazer acontecer” ou “criar algo relevante”.
 
 ## Arquitetura
@@ -41,12 +42,12 @@ App
 - O menu fica fixo no topo; preserve `scroll-padding-top` quando ajustar seu tamanho.
 - Há temas claro e escuro. A preferência inicial segue o sistema, pode ser alterada no header e é salva em `localStorage` como `theme`.
 - Na primeira visita, a página faz uma abertura de quatro segundos: título aos 1s, retrato aos 2s, função e descrição aos 3s e o restante da página aos 4s. Cada novo bloco deve ter transição suave própria. Enquanto ela ocorre, a rolagem fica bloqueada. Para `prefers-reduced-motion`, renderize a página completa imediatamente, sem espera nem bloqueio.
-- A logo do header é `src/assets/logo/logo-rv.png`, um PNG transparente com apenas o símbolo `{RV}`. Não reintroduza fundo, palavras ou versões separadas por tema.
-- `src/assets/logo/` concentra todos os arquivos de logo e `src/assets/personal/` as fotos pessoais. Não deixe assets diretamente na raiz de `src/assets/`; novos tipos de imagem devem usar uma subpasta semântica própria quando forem adicionados.
+- O header usa o novo símbolo geométrico da marca: `src/assets/logo/logo-rv.png` no tema claro e `src/assets/logo/logo-rv-monochrome.png` no tema escuro. Ambos são PNGs transparentes, sem fundo ou texto sobreposto.
+- `src/assets/brand/` preserva os arquivos-fonte entregues da identidade visual, `src/assets/logo/` concentra as variantes usadas pela interface e `src/assets/personal/` as fotos pessoais. Não deixe assets diretamente na raiz de `src/assets/`; novos tipos de imagem devem usar uma subpasta semântica própria quando forem adicionados.
 - Marcas de empresas ficam em `src/assets/experience/`, projetos em `src/assets/projects/` e instituições em `src/assets/education/`.
 - Os carrosséis de experiência e projetos devem ter controles acessíveis, navegação por teclado e não devem avançar automaticamente.
 - O retrato principal é `src/assets/personal/personalPhoto.jpg`: no Hero, ele ocupa todo o card e é recortado por CSS, mantendo sua orientação original. Pré-carregue e decodifique a foto antes do fade de entrada, e informe suas dimensões intrínsecas para evitar saltos de layout. Visualmente, o card fica à esquerda do texto; preserve a ordem semântica do texto antes dele. Reserve a altura final do bloco de texto durante a abertura. Mantenha o `alt="Rodrigo Vieira Lima"` e não inclua texto sobre a foto; o link do LinkedIn permanece como detalhe externo, à esquerda do card.
-- O tema usa branco, preto e os tons da logo: ciano (`#00d8c9`), laranja (`#ff9d3d`) e rosa (`#f63770`). Preserve contraste adequado em ambos os temas.
+- O tema usa branco, preto e os tons da nova marca: verde vivo (`#00ea90`), verde secundário (`#0ca579`) e cinzas (`#6b6b6b` e `#c1c1c1`). Use variantes de contraste quando a cor for aplicada a texto ou foco.
 - O fundo contém apenas partículas desfocadas decorativas. Ele deve permanecer com `aria-hidden`, não capturar ponteiro e respeitar `prefers-reduced-motion`.
 - Todo bloco textual exposto sobre o fundo deve usar a classe `text-backdrop`, que aplica desfoque adicional às partículas sem alterar seu conteúdo.
 - A grade de habilidades usa logotipos decorativos do Simple Icons; mantenha o nome da tecnologia em texto e use apenas tecnologias confirmadas em `src/data/portfolio.ts`.

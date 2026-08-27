@@ -1,6 +1,7 @@
 import { Menu, Moon, Sun } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import logo from '../assets/logo/logo-rv.png'
+import monochromeLogo from '../assets/logo/logo-rv-monochrome.png'
 import { Button } from './ui/button'
 
 const links = [
@@ -43,7 +44,14 @@ export function Header({ theme, onThemeToggle }: HeaderProps) {
     <header className="header">
       <div className="header__content">
         <a className="brand" href="#inicio" aria-label="Página inicial">
-          <img className="brand__logo" src={logo} alt="" />
+          <img
+            className="brand__logo"
+            src={theme === 'dark' ? monochromeLogo : logo}
+            alt=""
+            width="866"
+            height="994"
+            data-theme-variant={theme}
+          />
         </a>
         <nav aria-label="Navegação principal">
           {links.map(([label, href]) => (

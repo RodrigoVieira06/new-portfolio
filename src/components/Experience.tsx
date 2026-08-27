@@ -8,7 +8,7 @@ export function Experience() {
       <SectionHeading
         eyebrow="02 / EXPERIÊNCIA"
         title="Trajetória profissional"
-        description="Empresas, responsabilidades e tecnologias que marcaram minha atuação desde 2022."
+        description="Empresas, responsabilidades e tecnologias que fazem parte da minha atuação desde 2019."
       />
       <Carousel
         label="Experiências profissionais"
@@ -28,6 +28,20 @@ export function Experience() {
               <h3>{experience.company}</h3>
               <p className="experience-card__role">{experience.role}</p>
               <p className="experience-card__summary">{experience.summary}</p>
+              {experience.previousRoles && (
+                <div className="experience-card__history">
+                  <h4>Trajetória anterior na empresa</h4>
+                  {experience.previousRoles.map((item) => (
+                    <div key={item.role}>
+                      <p>
+                        <strong>{item.role}</strong>
+                        <span>{item.period}</span>
+                      </p>
+                      <p>{item.summary}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
               <ul>
                 {experience.highlights.map((item) => (
                   <li key={item}>{item}</li>

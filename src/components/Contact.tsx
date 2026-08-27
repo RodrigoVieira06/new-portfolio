@@ -17,8 +17,8 @@ export function Contact() {
       <div className="contact__layout">
         <div className="text-backdrop">
           <p className="lead">
-            Para conversar sobre minha experiência profissional e oportunidades
-            em desenvolvimento frontend, use o formulário ou o e-mail abaixo.
+            Para conversar sobre meu trabalho, minha trajetória e
+            desenvolvimento frontend, use o formulário ou o e-mail abaixo.
           </p>
           <div className="contact__links">
             <a href="mailto:rodrigovlima06@gmail.com">

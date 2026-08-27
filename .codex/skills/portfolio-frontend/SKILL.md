@@ -1,6 +1,6 @@
 ---
 name: portfolio-frontend
-description: Mantém o portfólio de Rodrigo Vieira Lima alinhado ao currículo confirmado, ao foco em oportunidades CLT e aos padrões de qualidade do projeto.
+description: Mantém o portfólio de Rodrigo Vieira Lima alinhado aos currículos confirmados, à apresentação de sua trajetória e aos padrões de qualidade do projeto.
 triggers:
   - "portfólio"
   - "portfolio"
@@ -27,15 +27,16 @@ Antes de alterar o projeto, leia nesta ordem:
 
 ## Objetivo
 
-O site apresenta Rodrigo para vagas CLT de desenvolvimento frontend. Recrutadores e lideranças técnicas devem conseguir identificar experiência, tecnologias e contato sem precisar interpretar linguagem de marketing.
+O site apresenta quem Rodrigo é profissionalmente, sua trajetória e os trabalhos que desenvolveu. Visitantes devem conseguir identificar experiência, responsabilidades, tecnologias e contato sem precisar interpretar linguagem de marketing.
 
 ## Regras de conteúdo
 
 - `src/data/portfolio.ts` é a fonte de verdade para histórico profissional e habilidades.
+- `docs/personal/Profile.pdf` é uma referência documental complementar; consolide no arquivo tipado qualquer informação selecionada antes de exibi-la.
 - Não invente empresas, cargos, datas, resultados, métricas, projetos, certificações ou tecnologias.
 - Escreva em português brasileiro, de forma direta e verificável.
 - Evite slogans, clichês, superlativos, promessas e tom de venda/freelancing.
-- O público principal são oportunidades CLT, mas não declare disponibilidade para oportunidades sem confirmação explícita.
+- Não direcione a apresentação a processos seletivos nem a transforme em anúncio de disponibilidade ou oferta de serviços.
 
 ## Regras técnicas
 
@@ -46,9 +47,9 @@ O site apresenta Rodrigo para vagas CLT de desenvolvimento frontend. Recrutadore
 - O header é fixo; mudanças nele devem preservar a compensação de âncora.
 - Temas usam `data-theme` no `html`, preferência do sistema no primeiro acesso e persistência em `localStorage` como `theme`.
 - A abertura inicial é controlada por `useOpeningSequence`: aguarde um segundo entre título, retrato, descrição e página completa, bloqueando a rolagem até o fim. Cada bloco revelado deve ter sua própria animação de entrada. Sempre pule a espera e o bloqueio se `prefers-reduced-motion` estiver ativo.
-- A paleta usa branco, preto e os tons da logo: ciano `#00d8c9`, laranja `#ff9d3d` e rosa `#f63770`, com variantes de contraste por tema.
-- A logo do header é `src/assets/logo/logo-rv.png`, PNG transparente contendo apenas `{RV}`. Não reintroduza fundos raster ou versões por tema.
-- Organize imagens locais por finalidade. `src/assets/logo/` é reservado para arquivos de marca e `src/assets/personal/` para fotos pessoais; ao chegar uma nova categoria, crie uma subpasta semântica em `src/assets/` e não deixe assets na raiz.
+- A paleta usa branco, preto e os tons da marca: verde vivo `#00ea90`, verde secundário `#0ca579` e cinzas `#6b6b6b` e `#c1c1c1`, com variantes de contraste por tema.
+- O header usa `src/assets/logo/logo-rv.png` no tema claro e `src/assets/logo/logo-rv-monochrome.png` no tema escuro. Ambos são PNGs transparentes com apenas o símbolo geométrico da marca.
+- Organize imagens locais por finalidade. `src/assets/brand/` preserva os arquivos-fonte da identidade, `src/assets/logo/` contém as variantes usadas pela interface e `src/assets/personal/` as fotos pessoais; ao chegar uma nova categoria, crie uma subpasta semântica em `src/assets/` e não deixe assets na raiz.
 - O retrato do Hero usa `src/assets/personal/personalPhoto.jpg` com `alt="Rodrigo Vieira Lima"`. Ele deve preencher o card sem gradiente ou texto, com recorte responsivo e orientação original. Pré-carregue e decodifique a foto antes de sua animação, declarando suas dimensões intrínsecas. Reserve a altura final do texto para evitar saltos entre os estágios. Visualmente, o retrato fica antes do texto sem alterar a ordem semântica; o LinkedIn é o único detalhe externo associado ao retrato e fica à esquerda do card.
 - O fundo é exclusivamente `ParticleBackground`: decorativo, sem eventos de ponteiro, com `aria-hidden` e compatível com `prefers-reduced-motion`.
 - Tecnologias confirmadas podem usar logotipos decorativos do Simple Icons, mas o nome da tecnologia deve continuar visível em texto.

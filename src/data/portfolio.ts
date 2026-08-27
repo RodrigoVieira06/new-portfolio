@@ -12,6 +12,11 @@ export type Experience = {
   period: string
   summary: string
   highlights: string[]
+  previousRoles?: {
+    role: string
+    period: string
+    summary: string
+  }[]
   image: string
 }
 
@@ -39,11 +44,12 @@ export const experiences: Experience[] = [
     period: 'fev. 2025 — atual',
     image: hitssLogo,
     summary:
-      'Estruturação e evolução de uma aplicação React em arquitetura multirepo e de microfrontends, desde as definições técnicas até a produção.',
+      'Construção e evolução do frontend de um sistema de gestão de redes para a Claro, com arquitetura multirepo e de microfrontends.',
     highlights: [
-      'React, TypeScript, Vite Module Federation e Zustand',
+      'React, TypeScript, Vite Module Federation, Zustand e pnpm',
       'BFFs em NestJS e FastAPI e integrações com APIs',
       'Biblioteca interna com Rspack e Storybook publicada no Nexus',
+      'Testes com Jest, padronização com Biome e definições técnicas',
       'Mentoria, apresentações técnicas e demonstrações da solução',
     ],
   },
@@ -57,18 +63,20 @@ export const experiences: Experience[] = [
     highlights: [
       'React, TypeScript, Ant Design e Lerna',
       'Jest e React Testing Library',
-      'Rollup, Storybook, ESLint e Prettier',
+      'Rollup, TSup, Storybook, ESLint e Prettier',
+      'Pipelines de CI/CD com GitHub Actions',
     ],
   },
   {
     company: 'QUAY',
     role: 'Desenvolvedor Frontend Pleno',
-    period: 'ago. 2024 — out. 2024',
+    period: 'ago. 2024 — nov. 2024',
     image: quayLogo,
     summary:
       'Desenvolvimento de uma aplicação web de gestão de recursos humanos para a SOMA RH.',
     highlights: [
       'Angular 17, TypeScript e Ng Zorro',
+      'Interfaces com cálculos dinâmicos inspiradas em planilhas',
       'Versionamento com Git e acompanhamento no Azure DevOps',
     ],
   },
@@ -84,6 +92,18 @@ export const experiences: Experience[] = [
       'Flutter, Dart, Clean Architecture e testes unitários',
       'Internacionalização e organização multirepo',
     ],
+    previousRoles: [
+      {
+        role: 'Assistente de Testes e Qualidade de Software',
+        period: 'nov. 2020 — jan. 2022',
+        summary: 'Automação de testes em sistemas ERP com Python.',
+      },
+      {
+        role: 'Estagiário de Testes e Qualidade de Software',
+        period: 'jul. 2019 — nov. 2020',
+        summary: 'Automação de testes em sistemas ERP com Python e Groovy.',
+      },
+    ],
   },
 ]
 
@@ -93,11 +113,12 @@ export const projects: Project[] = [
     context: 'Projeto independente',
     image: lipcatLogo,
     summary:
-      'Desenvolvimento de uma aplicação web composta por landing page e sistema interno integrado a APIs.',
+      'Desenvolvimento para o LIPCAT/UFRJ de uma aplicação web composta por landing page e sistema interno integrado a APIs.',
     highlights: [
       'React, Next.js e TypeScript',
       'Interfaces responsivas com Tailwind CSS e Material Design',
       'Internacionalização com i18n',
+      'Definição de layouts para fluxos claros e consistentes',
     ],
   },
 ]
@@ -111,7 +132,8 @@ export const education: Education[] = [
   },
   {
     institution: 'IFRJ',
-    course: 'Ensino médio',
+    course: 'Técnico em Petróleo e Gás integrado ao ensino médio',
+    period: '2010 — 2016',
     image: ifrjLogo,
   },
 ]

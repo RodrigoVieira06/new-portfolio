@@ -31,6 +31,30 @@ describe('Conteúdo profissional', () => {
 
     expect(screen.getByRole('heading', { name: 'FAETERJ-Rio' })).toBeVisible()
     expect(screen.getByRole('heading', { name: 'IFRJ' })).toBeVisible()
-    expect(screen.getByText('Ensino médio')).toBeVisible()
+    expect(
+      screen.getByText('Técnico em Petróleo e Gás integrado ao ensino médio'),
+    ).toBeVisible()
+    expect(screen.getByText('2010 — 2016')).toBeVisible()
+  })
+
+  it('apresenta a progressão de carreira iniciada em qualidade de software', async () => {
+    const user = userEvent.setup()
+    render(<Experience />)
+
+    for (let index = 0; index < 3; index += 1) {
+      await user.click(screen.getByRole('button', { name: 'Próximo item' }))
+    }
+
+    expect(
+      screen.getByText('Assistente de Testes e Qualidade de Software'),
+    ).toBeVisible()
+    expect(
+      screen.getByText('Estagiário de Testes e Qualidade de Software'),
+    ).toBeVisible()
+    expect(
+      screen.getByText(
+        'Automação de testes em sistemas ERP com Python e Groovy.',
+      ),
+    ).toBeVisible()
   })
 })

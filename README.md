@@ -1,6 +1,6 @@
 # Portfólio - Rodrigo Vieira Lima
 
-Landing page pessoal de Rodrigo Vieira Lima, Desenvolvedor Frontend Sênior, direcionada a oportunidades CLT. O projeto apresenta sua trajetória profissional confirmada de forma clara, responsiva e fácil de evoluir.
+Portfólio pessoal de Rodrigo Vieira Lima, Desenvolvedor Frontend Sênior. A página apresenta seu perfil, trabalhos, trajetória profissional, formação e competências de forma clara, responsiva e fácil de evoluir.
 
 ## Stack
 
@@ -39,23 +39,29 @@ O aplicativo abrirá em `http://localhost:5173`.
 ```text
 src/
   assets/
-    logo/           # Arquivos de marca, incluindo o símbolo transparente {RV}
+    brand/          # Arquivos-fonte da identidade visual
+    education/      # Marcas das instituições de ensino
+    experience/     # Marcas das empresas
+    logo/           # Variantes da marca usadas no header
+    personal/       # Fotografia pessoal
+    projects/       # Imagens dos projetos
   components/     # Seções da landing e primitivos de interface
   data/           # Conteúdo profissional tipado
   hooks/          # Regras reutilizáveis (formulário de contato)
   lib/            # Utilitários
   styles/         # Tokens e estilos SCSS globais
   test/           # Configuração compartilhada dos testes
-docs/             # Contexto arquitetural para pessoas e IAs
+docs/             # Requisitos, arquitetura e referências documentais
 .codex/skills/    # Skills locais para continuidade e revisão
 ```
 
 ## Regras do projeto
 
 - O conteúdo profissional vem de `src/data/portfolio.ts` e não deve ser inventado.
-- A comunicação é direta e profissional, voltada a recrutadores e oportunidades CLT; não use slogans ou linguagem de venda.
-- A interface mantém temas claro e escuro, com paleta branca, preta e destaques ciano, laranja e rosa derivados da logo.
-- Logos ficam em `src/assets/logo/`; novas imagens devem ser separadas em subpastas semânticas por finalidade.
+- O currículo em `docs/personal/Profile.pdf` é uma referência complementar; informações selecionadas devem ser consolidadas no arquivo de dados antes de aparecerem na interface.
+- A comunicação apresenta trabalhos e trajetória de forma direta, sem slogans ou linguagem de venda.
+- A interface mantém temas claro e escuro, com branco, preto, verde e cinza derivados da marca.
+- Arquivos-fonte da marca ficam em `src/assets/brand/`, variantes usadas pela interface em `src/assets/logo/` e as demais imagens em subpastas semânticas por finalidade.
 - O fundo usa partículas desfocadas apenas como elemento decorativo e respeita a preferência de redução de movimento.
 - Toda mudança de comportamento ou conteúdo relevante deve incluir testes e passar em `make check`.
 

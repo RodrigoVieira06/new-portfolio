@@ -7,9 +7,9 @@ export function About() {
       <div className="about__content">
         <div className="text-backdrop">
           <p className="lead">
-            Iniciei minha jornada em tecnologia em 2019 e atuo profissionalmente
-            no desenvolvimento de software desde 2022, hoje como Desenvolvedor
-            Frontend Sênior.
+            Atuo com tecnologia desde 2019. Comecei em qualidade de software e
+            automação de testes, migrei para o desenvolvimento frontend em 2022
+            e hoje trabalho como Desenvolvedor Frontend Sênior.
           </p>
           <p>
             Minha atuação é concentrada em React, TypeScript e JavaScript, com
@@ -20,8 +20,9 @@ export function About() {
           <p>
             Também defino padrões técnicos, construo bibliotecas de componentes,
             escrevo testes unitários e compartilho conhecimento com equipes de
-            desenvolvimento, considerando qualidade técnica, experiência de uso
-            e necessidades do produto.
+            desenvolvimento. A experiência anterior com qualidade faz parte da
+            forma como considero arquitetura, testes, experiência de uso e
+            necessidades do produto.
           </p>
         </div>
         <div className="skills-grid">
